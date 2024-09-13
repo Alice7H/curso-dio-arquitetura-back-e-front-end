@@ -20,7 +20,7 @@ namespace curso.api.Controllers
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly IAuthenticationService _authenticationService;
         public UsuarioController(ILogger<UsuarioController> logger,
-            IUsuarioRepository usuarioRepository,             
+            IUsuarioRepository usuarioRepository,
             IAuthenticationService authenticationService)
         {
             _logger = logger;
@@ -89,7 +89,7 @@ namespace curso.api.Controllers
         public async Task<IActionResult> Registrar(RegistroViewModelInput loginViewModelInput)
         {
             try
-            { 
+            {
                 var usuario = await _usuarioRepository.ObterUsuarioAsync(loginViewModelInput.Login);
 
                 if (usuario != null)

@@ -35,7 +35,7 @@ namespace curso.api.Controllers
         [SwaggerResponse(statusCode: 401, description: "Não autorizado")]
         [HttpPost]
         [Route("")]
-        public async Task<IActionResult> Post(CursoViewModelInput cursoViewModelInput)
+        public IActionResult Post(CursoViewModelInput cursoViewModelInput)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace curso.api.Controllers
         [SwaggerResponse(statusCode: 401, description: "Não autorizado")]
         [HttpGet]
         [Route("")]
-        public async Task<IActionResult> Get()
+        public IActionResult Get()
         {
             try
             {
